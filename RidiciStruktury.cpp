@@ -47,6 +47,7 @@ int main()
             }
             cout << "Soucet je " << soucet << endl;
         }
+        break;
         case 'D':
         {
             int n;
@@ -58,8 +59,14 @@ int main()
             do {
                 double nc = 10 + (100 - 10) * (double)rand() / (RAND_MAX + 1);
                 soucet += nc;
-                cout << nc << endl;
-
+                if (i == 0)
+                {
+                    soucet = 0;
+                }
+                else
+                {
+                    cout << nc << endl;
+                }
                 ++i;
             } while (i < n);
             cout << "Soucet je " << soucet << endl;
