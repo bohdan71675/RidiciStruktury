@@ -71,7 +71,7 @@ int main()
         }
         break;
         }
-        cout << "\nF = For, W = While, D = DO While, K=Konec: ";
+        cout << "\n F = For, W = While, D = DO While, K=Konec: ";
         cin >> volba;
     }
 }
