@@ -55,21 +55,24 @@ int main()
             double soucet = 0;
             cout << "Zadej cislo n: ";
             cin >> n;
+            if (n > 0)
+            {
+                do {
+                    double nc = 10 + (100 - 10) * (double)rand() / (RAND_MAX + 1);
 
-            do {
-                double nc = 10 + (100 - 10) * (double)rand() / (RAND_MAX + 1);
-                soucet += nc;
-                if (i == 0)
-                {
-                    soucet = 0;
-                }
-                else
-                {
                     cout << nc << endl;
-                }
-                ++i;
-            } while (i < n);
-            cout << "Soucet je " << soucet << endl;
+
+                    soucet += nc;
+                    ++i;
+
+                } while (i < n);
+                cout << "Soucet je " << soucet << endl;
+            }
+            else
+            {
+                cout << "Nula prvku v posloupnosti";
+            }
+
         }
         break;
         default:
